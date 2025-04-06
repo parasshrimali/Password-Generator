@@ -1,0 +1,162 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #f1f1f1;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+    color: #00ffe5;
+  }
+  
+  header p, footer p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .generator, .saved {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    padding: 25px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 520px;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    color: #00ffc8;
+    font-size: 1.5rem;
+  }
+  
+  .controls label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .checkboxes label {
+    display: inline-block;
+    margin-right: 12px;
+  }
+  
+  .output {
+    background: #2c2f4a;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: monospace;
+    font-size: 16px;
+    margin: 10px 0;
+    word-break: break-word;
+  }
+  
+  .action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  input#labelInput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+  }
+  
+  .green { background: #1dd1a1; color: #fff; }
+  .green:hover { background: #10ac84; }
+  
+  .blue { background: #54a0ff; color: #fff; }
+  .blue:hover { background: #2e86de; }
+  
+  .danger { background: #ee5253; color: #fff; margin-top: 15px; }
+  .danger:hover { background: #c0392b; }
+  
+  .strength {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  #savedPasswords .item {
+    background: #2f3640;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: monospace;
+  }
+  
+  #savedPasswords .item span {
+    flex: 1;
+  }
+  
+  #savedPasswords button {
+    background: none;
+    border: none;
+    color: #ff7675;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 600px) {
+    .action-row {
+      flex-direction: column;
+    }
+  
+    .btn, input#labelInput {
+      width: 100%;
+    }
+  }
+  
